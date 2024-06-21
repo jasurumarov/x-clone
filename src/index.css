@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    scroll-behavior: smooth !important;
+}
+
+body {
+    background: black;
+}
+
+.container {
+    max-width: 1272px;
+}
+
+.overlay {
+    animation: bgoverlay .2s forwards;
+    opacity: .5;
+}
+
+@keyframes bgoverlay {
+    to {
+        opacity: 1;
+    }
+}
+
+.model {
+    width: 100%;
+    max-height: 650px;
+    height: 100%;
+    min-height: 200px;
+    overflow: auto;
+    background: black;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%) scale(.7);
+    padding: 12px 80px;
+    border-radius: 16px;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: modal .2s forwards;
+}
+
+@keyframes modal {
+    to {
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%, -50%);
+    }
+}
