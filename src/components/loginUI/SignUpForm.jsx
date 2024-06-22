@@ -29,7 +29,7 @@ const SignUpForm = () => {
                 localStorage.setItem("user-data", JSON.stringify(res.data.data.user))
                 toast.success(res.data.message)
             })
-            .catch((err) => toast.error(err.data.message))
+            .catch((err) => toast.error('Already user has registered. Please Sign in'))
 
     }
     return (
