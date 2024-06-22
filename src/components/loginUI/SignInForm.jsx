@@ -26,7 +26,7 @@ const SignInForm = () => {
                 navigate("/")
                 toast.success(res.data.message)
             })
-            .catch((err) => toast.error('Username or password is incorrect.'))
+            .catch(() => toast.error('Username or password is incorrect.'))
 
     }
     return (

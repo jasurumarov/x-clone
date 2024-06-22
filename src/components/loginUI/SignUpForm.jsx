@@ -29,6 +29,7 @@ const SignUpForm = () => {
                 localStorage.setItem("user-data", JSON.stringify(res.data.data.user))
                 toast.success(res.data.message)
             })
+            .catch(() => toast.error(res.data.message))
 
     }
     return (
